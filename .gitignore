@@ -1,0 +1,33 @@
+# --- Python  ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- UV/Venv ---
+.venv/
+venv/
+env/
+
+# --- macOS ---
+.DS_Store
+
+# --- reports and files ---
+reports/
+logs/
+*.csv
+*.xlsx
+*.sql
+*.log
+
+# --- run-time files ---
+io_state.json
+io_command.json
+*.tmp
+
+# --- config.py ---
+config.py
+control_config.py
+
+# --- IDE 配置 ---
+.vscode/
+.idea/
