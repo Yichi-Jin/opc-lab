@@ -15,8 +15,8 @@
 | 任务 | 命令 | 说明 |
 | :--- | :--- | :--- |
 | **启动采集服务** | `uv run python scheduler.py` | 启动守护进程，周期性采集并入库 |
-| **查看数据库** | `psql -U user0 -d opc_lab_data` | 进入数据库命令行 (密码在 config.py) |
-| **数据库导出文件** | `pg_dump -U user0 -h localhost opc_lab_data > opc_lab_backup.sql` | 导出为sql文件 |
+| **查看数据库** | `psql -U your_user -d opc_lab_data` | 进入数据库命令行 (密码在 config.py) |
+| **数据库导出文件** | `pg_dump -U your_user -h localhost opc_lab_data > opc_lab_backup.sql` | 导出为sql文件 |
 
 ### 🟡 配置更新 (When Tags Change)
 | 任务 | 命令 | 说明 |
