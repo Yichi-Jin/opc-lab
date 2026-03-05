@@ -1,5 +1,10 @@
 # 🏭 Industrial OPC UA Data Pipeline
 
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
+[![OPC UA](https://img.shields.io/badge/Protocol-OPC%20UA-orange)](https://opcfoundation.org/)
+[![Database](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql)](https://www.postgresql.org/)
+[![Package Manager](https://img.shields.io/badge/Manager-uv-purple)](https://github.com/astral-sh/uv)
+
 这是一个专为 macOS/Linux 环境设计的工业物联网 (IIoT) 数据采集系统。它能够连接 OPC UA 服务器，根据指定的位号表进行周期性采集，并将清洗后的数据存入本地 PostgreSQL 时序数据库。
 
 ---
@@ -23,7 +28,6 @@
 ### 🔵 工具与调试
 | 任务 | 命令 | 说明 |
 | :--- | :--- | :--- |
-| **全量扫描** | `uv run python print_nodes.py` | 扫描服务器所有节点并生成 CSV |
 | **手动快照** | `uv run python main.py` | 执行一次性采集并生成 CSV 文件报告 |
 | **环境同步** | `uv sync` | 安装/更新项目依赖 |
 
@@ -49,3 +53,23 @@
 ├── init_db_tags.py             # [工具] 数据库元数据初始化脚本
 ├── convert_flat_csv_to_json.py # [工具] CSV -> JSON 转换器
 └── README.md                   # 项目文档
+```
+
+---
+
+## 🏗️ 快速开始
+
+修改 `config.py` 与 `config_control.py` 中的 OPC UA 服务器地址与文件配置路径。
+
+确保您的系统已安装 `uv`：
+
+```bash
+curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+```
+
+授权并运行安装脚本（此项目占用约 300MB 磁盘空间）:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
