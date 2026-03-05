@@ -5,6 +5,7 @@ __pycache__/
 
 # --- UV/Venv ---
 .venv/
+.uv/
 venv/
 env/
 
